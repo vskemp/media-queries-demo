@@ -1,0 +1,130 @@
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    color: white;
+}
+
+body > * {
+    width: 100%;
+}
+
+header {
+    flex: 0 0 auto;
+    height: 100px;
+    background-color: red;
+}
+
+.wrapper {
+    height: 100%;
+    /* flex: 1 0 auto; */
+    /* flex-grow: 1; */
+
+    display: flex;
+    flex-direction: column;
+    /* flex-shrink: 1; */
+    /* flex-basis: auto; */
+    /* height: 100%; */
+}
+
+nav {
+    /*    grow shrink basis*/
+    flex:   0     0    auto;
+    height: 80px;
+    background-color: orange;
+}
+
+section {        
+    flex: 1 1 auto;
+    /* height: 80%; */
+    /* flex-basis: 300px; */
+    /* max-height: 300px; */
+    background-color: purple;
+    overflow-y: auto;
+    background-image: url(../images/small\ cat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+aside {
+    flex: 0 0 auto;
+    height: 20%;
+    background-color: blue;
+}
+
+footer {
+    flex: 0 0 auto;
+    height: 50px;
+    background-color: green;
+}
+
+/* Media Queries go at the bottom
+    because of the cascade!
+    We want to add styles that are
+    further down the .css file.
+*/
+@media screen and (min-width: 600px) {    
+    .wrapper {
+        /* display: flex; */
+        flex-direction: row;   
+    }
+
+    .wrapper > * {
+        height: 100%;
+        /* width: 100%; */
+    }
+
+    header {
+        background-color: darkcyan;
+    }
+    nav {
+        background-color: yellowgreen;
+        width: 20%;
+    }
+    section {
+        background-color: cornflowerblue;
+        width: 65%;
+        /* max-height: 100%; */
+        background-image: url(../images/animal-pet-cute-fur-137049.jpg);
+    }
+    aside {
+        background-color: pink;
+        width: 15%;
+    }
+    footer {
+        background-color:lightcoral;
+    }
+
+
+
+}
+
+@media screen and (min-width: 800px) {
+    header {
+        background-color: rgb(61, 90, 14);
+    }
+    nav {
+        background-color: rgb(100, 49, 49);
+    }
+    section {
+        background-color: rgb(253, 211, 211);
+    }
+    aside {
+        background-color: rgb(61, 57, 57);
+    }
+    footer {
+        background-color: rgb(133, 110, 8);
+    }
+}
+
